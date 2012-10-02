@@ -57,7 +57,6 @@ sub run {
     say '  retried:   ', ($f->{retried_at} || '');
     say '  payload:   ', Data::Dump::dump($f->{payload});
   }
-);
 }
 
 1;

@@ -21,6 +21,6 @@ WriteMakefile(
     },
     no_index => {directory => ['test']}
   },
-  EXE_FILES => ['bin/queues'],
+  EXE_FILES => ['bin/rexecute'],
   test => {TESTS => 'test/*.t'}
 );
