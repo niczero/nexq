@@ -1,0 +1,56 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+use Mojolicious::Commands;
+
+get '/' => sub {
+  shift->render(text => q{Hello from Rex});
+};
+
+my $commands = Mojolicious::Commands->new;
+push @{$commands->namespaces}, 'Rexq::Cmd';
+
+app->start;
+__END__
+
+# ------------
+# Helpers
+# ------------
+
+__DATA__
+__END__
+=pod
+
+=head1 Name
+
+=head1 Usage
+
+=head1 Description
+
+=head1 Required arguments
+
+=head1 Options
+
+=head1 Exit status
+
+=head1 Diagnostics
+
+=head1 Configuration and environment
+
+=head1 Dependencies and incompatibilities
+
+=head1 Bugs and limitations
+
+=head1 Internals
+
+=for :graph_control config -> new
+
+=head1 Author
+
+Nic Sandfield (nsandfield@ebuyer.com)
+
+=head1 Licence and copyright
+
+=head1 Disclaimer of warranty
+
+=cut
+
